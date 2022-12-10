@@ -6,7 +6,7 @@
 
   grid-template-areas:
     "header header header"
-    "left-block content right-block";
+    "left-block feed right-block";
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 8fr 2fr;
 
@@ -36,8 +36,8 @@
 
 }
 
-.content {
-  grid-area: content;
+.feed {
+  grid-area: feed;
   background-color: antiquewhite;
 }
 
