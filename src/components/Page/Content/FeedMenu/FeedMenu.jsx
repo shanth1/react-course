@@ -1,8 +1,9 @@
 import React from "react";
+import s from "./FeedMenu.module.css";
 
 const FeedMenu = () => {
   return (
-    <div className="feed_menu">
+    <div className={s.feed_menu}>
       <nav className="categories">
         <div className="btn">
           <div className="label">Подборка</div>

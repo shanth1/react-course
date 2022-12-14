@@ -1,0 +1,13 @@
+.dynamic_island {
+    margin-left: 180px;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    width: 200px;
+    height: 30px;
+    background-color: black;
+    border-radius: 10px;
+    align-items: center;
+}

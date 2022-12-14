@@ -1,8 +1,9 @@
 import React from "react";
+import s from "./SideBar.module.css";
 
 const SideBar = () => {
   return (
-    <div className="side_bar">
+    <div className={s.side_bar}>
       <nav className="sections">
         <div className="btn">
           <img

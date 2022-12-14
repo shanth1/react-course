@@ -1,7 +1,7 @@
 import "./App.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Page from "./components/Page";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Page from "./components/Page/Page";
 
 const App = () => {
   return (

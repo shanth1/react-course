@@ -1,0 +1,6 @@
+.content_wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 1;
+    gap: 10px;
+}

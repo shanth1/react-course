@@ -1,0 +1,12 @@
+.post {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.post:last-child {
+    margin-bottom: 0;
+}
