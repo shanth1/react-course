@@ -5,7 +5,7 @@ import SideBar from "./SideBar";
 const Page = () => {
   return (
     <div className="page">
-      <div className="page-wrapper">
+      <div className="page_wrapper">
         <SideBar />
         <Content />
       </div>

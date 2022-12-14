@@ -2,7 +2,7 @@ import React from "react";
 
 const SideBar = () => {
   return (
-    <div className="side-bar">
+    <div className="side_bar">
       <nav className="sections">
         <div className="btn">
           <img
@@ -10,7 +10,7 @@ const SideBar = () => {
             src="https://cdn-icons-png.flaticon.com/64/77/77486.png"
             alt=""
           />
-          <div className="label">Портфолио</div>
+          <span className="label">Портфолио</span>
         </div>
         <div className="btn">
           <img
@@ -18,7 +18,7 @@ const SideBar = () => {
             src="https://cdn-icons-png.flaticon.com/64/77/77686.png"
             alt=""
           />
-          <div className="label">Лента</div>
+          <span className="label">Лента</span>
         </div>
         <div className="btn">
           <img
@@ -26,7 +26,7 @@ const SideBar = () => {
             src="https://cdn-icons-png.flaticon.com/64/77/77506.png"
             alt=""
           />
-          <div className="label">Общение</div>
+          <span className="label">Общение</span>
         </div>
         <div className="btn">
           <img
@@ -34,7 +34,7 @@ const SideBar = () => {
             src="https://cdn-icons-png.flaticon.com/64/77/77543.png"
             alt=""
           />
-          <div className="label">Друзья</div>
+          <span className="label">Друзья</span>
         </div>
         <div className="btn">
           <img
@@ -42,7 +42,7 @@ const SideBar = () => {
             src="https://cdn-icons-png.flaticon.com/64/77/77631.png"
             alt=""
           />
-          <div className="label">Альбом</div>
+          <span className="label">Альбом</span>
         </div>
         <div className="btn">
           <img
@@ -50,7 +50,7 @@ const SideBar = () => {
             src="https://cdn-icons-png.flaticon.com/64/77/77632.png"
             alt=""
           />
-          <div className="label">Музыка</div>
+          <span className="label">Музыка</span>
         </div>
         <div className="btn">
           <img
@@ -58,7 +58,7 @@ const SideBar = () => {
             src="https://cdn-icons-png.flaticon.com/64/77/77639.png"
             alt=""
           />
-          <div className="label">Игры</div>
+          <span className="label">Игры</span>
         </div>
       </nav>
     </div>

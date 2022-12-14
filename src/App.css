@@ -20,7 +20,7 @@
   height: 50px;
   background-color: antiquewhite;
 }
-.header .header-wrapper {
+.header .header_wrapper {
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -29,18 +29,32 @@
   height: 100%;
   gap: 20px;
 }
-.company-wrapper{
+.company_wrapper{
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 10px;
 }
-.icon-settings,
-.icon-logo{
+.company_name{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.label{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 14px;
+}
+.label.invert{
+  color:white;
+}
+
+
+.icon_settings,
+.icon_logo{
   width: 35px;
   cursor: pointer;
 }
-.header-wrapper .dynamic-island {
+.header_wrapper .dynamic_island {
   margin-left: 180px;
   box-sizing: border-box;
   padding: 10px;
@@ -50,7 +64,6 @@
   width: 200px;
   height: 30px;
   background-color: black;
-  color: aliceblue;
   border-radius: 10px;
   align-items: center;
 }
@@ -60,13 +73,13 @@
   margin-top: 50px;
   padding: 10px;
 }
-.page .page-wrapper {
+.page .page_wrapper {
     display: flex;
     align-items: flex-start;
     width: 1100px;
     margin: 0 auto;
 }
-.side-bar {
+.side_bar {
   box-sizing: border-box;
   padding-right: 10px;
   margin-bottom: 10px;
@@ -78,7 +91,7 @@
   margin-right: 10px;
 }
 
-.content-wrapper {
+.content_wrapper {
   display: flex;
   align-items: flex-start;
   flex-grow: 1;
@@ -87,7 +100,7 @@
 .feed{
   flex-grow: 1;
 }
-.feed-menu {
+.feed_menu {
   background-color: antiquewhite;
   position: sticky;
   width: 200px;

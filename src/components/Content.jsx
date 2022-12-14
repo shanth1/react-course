@@ -4,7 +4,7 @@ import FeedMenu from "./FeedMenu";
 
 const Content = () => {
   return (
-    <div className="content-wrapper">
+    <div className="content_wrapper">
       <Feed />
       <FeedMenu />
     </div>
