@@ -10,14 +10,6 @@
   color:white;
 }
 
-
-
-.icon {
-  width: 20px;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
 .btn {
   margin-bottom: 10px;
   cursor: pointer;
@@ -26,10 +18,16 @@
   align-items: center;
   padding-left: 10px;
 }
+
 .btn:hover {
   background-color: rgb(227, 210, 188);
   border-radius: 10px;
 }
+
 .btn:last-child {
   margin-bottom: 0;
 }
+
+
+
+
