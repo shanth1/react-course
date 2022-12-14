@@ -1,16 +1,14 @@
 import "./App.css";
 import Header from "./components/Header";
-import LeftBlock from "./components/LeftBlock";
-import Feed from "./components/Feed";
-import RightBlock from "./components/RightBlock";
+import Footer from "./components/Footer";
+import Page from "./components/Page";
 
 const App = () => {
   return (
     <div className="app-wrapper">
       <Header />
-      <LeftBlock />
-      <Feed />
-      <RightBlock />
+      <Page />
+      <Footer />
     </div>
   );
 };
