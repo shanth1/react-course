@@ -1,140 +1,80 @@
 import React from "react";
 import s from "./Feed.module.css";
 import Post from "./Post/Post";
+import RandomPost from "./Post/RandomPost";
 
 const Feed = () => {
     return (
         <div className={s.feed}>
+            <RandomPost />
+
             <Post
-                bg={require("./posts_data/bg/fish.jpg")}
-                img={require("./posts_data/posts/man3.jpg")}
-                avatar={require("./posts_data/avatars/avatars-4725937.png")}
+                bg={require("./Post/posts_data/bg/fish.jpg")}
+                img={require("./Post/posts_data/posts/man3.jpg")}
+                avatar={require("./Post/posts_data/avatars/avatars-4725937.png")}
                 author="Phessyn"
                 title="Salmon"
             />
             <Post
-                bg={require("./posts_data/bg/bg1.jpeg")}
-                img={require("./posts_data/posts/post1.jpeg")}
-                avatar={require("./posts_data/avatars/avatars-4725821.png")}
-                author="Ullah"
-                title="Forest"
-            />
-            <Post
-                bg={require("./posts_data/bg/future2.jpg")}
-                img={require("./posts_data/posts/furure1.jpg")}
-                avatar={require("./posts_data/avatars/male-cartoon-4725904.png")}
+                bg={require("./Post/posts_data/bg/future2.jpg")}
+                img={require("./Post/posts_data/posts/furure1.jpg")}
+                avatar={require("./Post/posts_data/avatars/male-cartoon-4725904.png")}
                 author="Maja"
                 title="Future"
             />
             <Post
-                bg={require("./posts_data/bg/crash.jpg")}
-                img={require("./posts_data/posts/moto.jpg")}
-                avatar={require("./posts_data/avatars/avatars-4725899.png")}
+                bg={require("./Post/posts_data/bg/crash.jpg")}
+                img={require("./Post/posts_data/posts/moto.jpg")}
+                avatar={require("./Post/posts_data/avatars/avatars-4725899.png")}
                 author="Yadefl"
                 title=""
             />
             <Post
-                bg={require("./posts_data/bg/pomegranate.jpg")}
-                img={require("./posts_data/posts/man1.jpg")}
-                avatar={require("./posts_data/avatars/avatars-4725937.png")}
-                author="Phessyn"
-                title="Pomegranate"
-            />
-            <Post
-                bg={require("./posts_data/bg/wass.jpg")}
-                img={require("./posts_data/posts/scratch.jpg")}
-                avatar={require("./posts_data/avatars/avatar-4725884.png")}
-                author="Laralvin"
-                title="Eye"
-            />
-            <Post
-                bg={require("./posts_data/bg/photos.jpg")}
-                img={require("./posts_data/posts/mosaic.jpg")}
-                avatar={require("./posts_data/avatars/boy-4725926.png")}
+                bg={require("./Post/posts_data/bg/photos.jpg")}
+                img={require("./Post/posts_data/posts/mosaic.jpg")}
+                avatar={require("./Post/posts_data/avatars/boy-4725926.png")}
                 author="Siak"
                 title="Mosaic"
             />
             <Post
-                bg={require("./posts_data/bg/w_w.jpg")}
-                img={require("./posts_data/posts/elastic.jpg")}
-                avatar={require("./posts_data/avatars/girl-4725827.png")}
-                author="Wantelaro"
-                title="Elastic"
-            />
-            <Post
-                bg={require("./posts_data/bg/bw5.jpg")}
-                img={require("./posts_data/bg/bw5.jpg")}
-                avatar={require("./posts_data/avatars/girl-4725856.png")}
+                bg={require("./Post/posts_data/bg/bw5.jpg")}
+                img={require("./Post/posts_data/bg/bw5.jpg")}
+                avatar={require("./Post/posts_data/avatars/girl-4725856.png")}
                 author="Ganiarior"
                 title="-------"
             />
             <Post
-                bg={require("./posts_data/bg/flower_yellow.jpg")}
-                img={require("./posts_data/posts/man4.jpg")}
-                avatar={require("./posts_data/avatars/male-cartoon-4725904.png")}
+                bg={require("./Post/posts_data/bg/flower_yellow.jpg")}
+                img={require("./Post/posts_data/posts/man4.jpg")}
+                avatar={require("./Post/posts_data/avatars/male-cartoon-4725904.png")}
                 author="Omeleter"
                 title="Flower"
             />
             <Post
-                bg={require("./posts_data/bg/couple.jpg")}
-                img={require("./posts_data/posts/pants.jpg")}
-                avatar={require("./posts_data/avatars/avatars-4725821.png")}
+                bg={require("./Post/posts_data/bg/couple.jpg")}
+                img={require("./Post/posts_data/posts/pants.jpg")}
+                avatar={require("./Post/posts_data/avatars/avatars-4725821.png")}
                 author="Zetismea"
                 title="Capybara"
             />
             <Post
-                bg={require("./posts_data/bg/city2.jpg")}
-                img={require("./posts_data/posts/element.jpg")}
-                avatar={require("./posts_data/avatars/avatar-4725884.png")}
-                author="Gamar"
-                title="Element"
-            />
-            <Post
-                bg={require("./posts_data/bg/green.jpg")}
-                img={require("./posts_data/posts/violet_man.jpg")}
-                avatar={require("./posts_data/avatars/avatars-4725821.png")}
+                bg={require("./Post/posts_data/bg/green.jpg")}
+                img={require("./Post/posts_data/posts/violet_man.jpg")}
+                avatar={require("./Post/posts_data/avatars/avatars-4725821.png")}
                 author="Ckaiahen"
                 title="Green"
             />
             <Post
-                bg={require("./posts_data/bg/trains.jpg")}
-                img={require("./posts_data/posts/ball.jpg")}
-                avatar={require("./posts_data/avatars/avatars-4725899.png")}
-                author="Oken"
-                title="Trains"
-            />
-            <Post
-                bg={require("./posts_data/bg/flower_bg.jpg")}
-                img={require("./posts_data/posts/w4.jpg")}
-                avatar={require("./posts_data/avatars/avatars-4725821.png")}
+                bg={require("./Post/posts_data/bg/flower_bg.jpg")}
+                img={require("./Post/posts_data/posts/w4.jpg")}
+                avatar={require("./Post/posts_data/avatars/avatars-4725821.png")}
                 author="Onenas"
                 title="Fern"
             />
             <Post
-                bg={require("./posts_data/bg/underground.jpg")}
-                img={require("./posts_data/posts/tyler.jpg")}
-                avatar={require("./posts_data/avatars/girl-4725827.png")}
-                author="Tyler"
-                title="the creator"
-            />
-            <Post
-                bg={require("./posts_data/bg/wool.jpg")}
-                img={require("./posts_data/posts/picture1.jpg")}
-                avatar={require("./posts_data/avatars/girl-4725856.png")}
-                author="Ckaiahen"
-                title="Workout"
-            />
-            <Post
-                bg={require("./posts_data/bg/bw1.jpg")}
-                img={require("./posts_data/posts/lips.jpg")}
-                avatar={require("./posts_data/avatars/avatars-4725821.png")}
-                author="Panon"
-                title="Lips"
-            />
-            <Post
-                bg={require("./posts_data/bg/updown.jpg")}
-                img={require("./posts_data/posts/grandma.jpg")}
-                avatar={require("./posts_data/avatars/avatar-4725884.png")}
+                bg={require("./Post/posts_data/bg/updown.jpg")}
+                img={require("./Post/posts_data/posts/grandma.jpg")}
+                avatar={require("./Post/posts_data/avatars/avatar-4725884.png")}
                 author="Kele"
                 title=""
             />
