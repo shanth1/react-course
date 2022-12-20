@@ -1,16 +1,21 @@
 import React from "react";
-import Feed from "./Feed/Feed";
-import FeedMenu from "./FeedMenu/FeedMenu";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { FeedWrapper } from "./FeedWrapper/FeedWrapper";
+import { MessengerWrapper } from "./MessengerWrapper/MeesengerWrapper";
 
-import s from "./Content.module.css";
+const router = createBrowserRouter([
+    {
+        path: "/feed",
+        element: <FeedWrapper />,
+    },
+    {
+        path: "/messenger",
+        element: <MessengerWrapper />,
+    },
+]);
 
 const Content = () => {
-    return (
-        <div className={s.content_wrapper}>
-            <Feed />
-            <FeedMenu />
-        </div>
-    );
+    return <RouterProvider router={router} />;
 };
 
 export default Content;

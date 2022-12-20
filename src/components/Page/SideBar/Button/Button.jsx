@@ -5,7 +5,9 @@ const Button = (props) => {
     return (
         <div className="btn">
             <img className={s.icon} src={props.icon} alt="" />
-            <span className="label">{props.label}</span>
+            <a href={props.href} className="label">
+                {props.label}
+            </a>
         </div>
     );
 };
