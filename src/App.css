@@ -1,5 +1,6 @@
-.html {
-  background-color: aliceblue;
+html {
+  overflow-x: hidden;
+  margin-left: calc(100vw - 100%);
 }
 
 .label {

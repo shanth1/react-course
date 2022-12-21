@@ -9,7 +9,7 @@
 }
 
 .header_wrapper {
-    margin: 0 auto;
+    margin-left: calc(50vw - 550px);
     display: flex;
     align-items: center;
     justify-content: space-between;
