@@ -4,10 +4,16 @@ import s from "./Button.module.css";
 
 const Button = (props) => {
     return (
-        <div className="btn">
+        <NavLink
+            to={props.href}
+            className={(navBtn) =>
+                navBtn.isActive ? `${s.btn} ${s.active}` : `${s.btn}`
+            }
+        >
+            <div className={s.indicator}></div>
             <img className={s.icon} src={props.icon} alt="" />
-            <NavLink to={props.href}>{props.label}</NavLink>
-        </div>
+            <div className={s.label}>{props.label}</div>
+        </NavLink>
     );
 };
 
