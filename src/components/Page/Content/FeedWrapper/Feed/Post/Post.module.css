@@ -1,7 +1,7 @@
 .post {
     display: grid;
-    grid-template-columns: 60px 200px 60px;
-    grid-template-rows: 0 50px 200px 50px 0;
+    grid-template-columns: 60px 1fr 60px;
+    grid-template-rows: 0 50px 1fr 50px 0;
     row-gap: 20px; 
     column-gap: 10px;            
     margin-bottom: 10px;

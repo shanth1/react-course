@@ -7,9 +7,8 @@ const Feed = () => {
     return (
         <div className={s.feed}>
             <RandomPost />
-            <RandomPost />
 
-            {/* <Post
+            <Post
                 bg={require("./Post/posts_data/bg/fish.jpg")}
                 img={require("./Post/posts_data/posts/man3.jpg")}
                 avatar={require("./Post/posts_data/avatars/avatars-4725937.png")}
@@ -78,7 +77,7 @@ const Feed = () => {
                 avatar={require("./Post/posts_data/avatars/avatar-4725884.png")}
                 author="Kele"
                 title=""
-            /> */}
+            />
         </div>
     );
 };
