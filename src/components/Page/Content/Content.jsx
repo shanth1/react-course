@@ -19,6 +19,7 @@ const Content = () => {
             <Route path="/album" element={<AlbumWrapper />} />
             <Route path="/music" element={<MusicWrapper />} />
             <Route path="/game" element={<GameWrapper />} />
+            <Route path="*" element={<div>404 Error</div>} />
         </Routes>
     );
 };
