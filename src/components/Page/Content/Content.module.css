@@ -1,12 +1,6 @@
 .content_wrapper {
-    /* display: flex;
-    align-items: flex-start; */
-    /* flex-grow: 1; */
-
-    width: 100%;
-    gap: 10px;
-
     display: grid;
+    gap: 10px;
     grid-template-columns: 1fr 280px;
     align-items: flex-start;
 }
