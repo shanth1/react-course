@@ -1,11 +1,11 @@
 import React from "react";
 import s from "../Content.module.css";
 
-export const GameWrapper = () => {
+export const ErrorWrapper = () => {
     return (
         <div className={s.content_wrapper}>
-            <div>Game</div>
-            <div>Games</div>
+            <div>404</div>
+            <div>Error</div>
         </div>
     );
 };

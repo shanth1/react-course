@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { AlbumWrapper } from "./AlbumWrapper/AlbumWrapper";
+import { ErrorWrapper } from "./ErrorWrapper/ErrorWrapper";
 import { FeedWrapper } from "./FeedWrapper/FeedWrapper";
 import { FriendsWrapper } from "./FriendsWrapper/FriendsWrapper";
 import { GameWrapper } from "./GameWrapper/GameWrapper";
@@ -19,7 +20,7 @@ const Content = () => {
             <Route path="/album" element={<AlbumWrapper />} />
             <Route path="/music" element={<MusicWrapper />} />
             <Route path="/game" element={<GameWrapper />} />
-            <Route path="*" element={<div>404 Error</div>} />
+            <Route path="*" element={<ErrorWrapper />} />
         </Routes>
     );
 };
