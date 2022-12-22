@@ -25,7 +25,9 @@
 
 .title {
     z-index: 10;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .img {
@@ -36,7 +38,14 @@
     transition: 0.3s;
 }
 
-.img:hover {
-    width: 90%;
-    opacity: 0.95;
+
+.content:hover .img{
+    width: 80%;
+    opacity: 0.93;
+}
+
+.content:hover .title {
+    opacity: 0.5 ;
+    font-weight: bold;
+    color: white;
 }
