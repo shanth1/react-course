@@ -2,7 +2,7 @@ import React from "react";
 import Feed from "./Feed/Feed";
 import FeedMenu from "./FeedMenu/FeedMenu";
 
-import s from "../Content.module.css";
+import s from "../../Content.module.css";
 
 export const FeedWrapper = () => {
     return (

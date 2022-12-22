@@ -1,0 +1,27 @@
+.btn {
+    margin-bottom: 10px;
+    cursor: pointer;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    align-items: center;
+    color: black;
+}
+.btn:last-child {
+    margin-bottom: 0;
+}
+.btn:hover {
+    background-color: rgb(227, 210, 188);
+}
+
+.label {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+
+
+

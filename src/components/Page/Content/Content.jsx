@@ -1,13 +1,13 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { AlbumWrapper } from "./AlbumWrapper/AlbumWrapper";
-import { ErrorWrapper } from "./ErrorWrapper/ErrorWrapper";
-import { FeedWrapper } from "./FeedWrapper/FeedWrapper";
-import { FriendsWrapper } from "./FriendsWrapper/FriendsWrapper";
-import { GameWrapper } from "./GameWrapper/GameWrapper";
-import { MessengerWrapper } from "./MessengerWrapper/MeesengerWrapper";
-import { MusicWrapper } from "./MusicWrapper/MusicWrapper";
-import { PortfolioWrapper } from "./PortfolioWrapper/PortfolioWrapper";
+import { AlbumWrapper } from "./Wrappers/AlbumWrapper/AlbumWrapper";
+import { ErrorWrapper } from "./Wrappers/ErrorWrapper/ErrorWrapper";
+import { FeedWrapper } from "./Wrappers/FeedWrapper/FeedWrapper";
+import { FriendsWrapper } from "./Wrappers/FriendsWrapper/FriendsWrapper";
+import { GameWrapper } from "./Wrappers/GameWrapper/GameWrapper";
+import { MessengerWrapper } from "./Wrappers/MessengerWrapper/MessengerWrapper";
+import { MusicWrapper } from "./Wrappers/MusicWrapper/MusicWrapper";
+import { PortfolioWrapper } from "./Wrappers/PortfolioWrapper/PortfolioWrapper";
 
 const Content = () => {
     return (

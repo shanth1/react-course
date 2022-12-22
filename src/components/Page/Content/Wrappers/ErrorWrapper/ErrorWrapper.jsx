@@ -1,5 +1,5 @@
 import React from "react";
-import s from "../Content.module.css";
+import s from "../../Content.module.css";
 
 export const ErrorWrapper = () => {
     return (

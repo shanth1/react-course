@@ -1,10 +1,10 @@
 import React from "react";
-import s from "../Content.module.css";
+import s from "../../Content.module.css";
 
-export const AlbumWrapper = () => {
+export const PortfolioWrapper = () => {
     return (
         <div className={s.content_wrapper}>
-            <div>Album</div>
+            <div>Portfolios</div>
             <div>Categories</div>
         </div>
     );

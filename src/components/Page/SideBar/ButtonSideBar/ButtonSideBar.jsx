@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import s from "./Button.module.css";
+import s from "./ButtonSideBar.module.css";
 
-const Button = (props) => {
+const ButtonSideBar = (props) => {
     return (
         <NavLink
             to={props.href}
@@ -17,4 +17,4 @@ const Button = (props) => {
     );
 };
 
-export default Button;
+export default ButtonSideBar;
