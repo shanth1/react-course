@@ -1,11 +1,12 @@
 import React from "react";
 import s from "../../Content.module.css";
+import { AlbumMenu } from "./AlbumMenu/AlbumMenu";
 
-export const MusicWrapper = () => {
+export const AlbumWrapper = () => {
     return (
         <div className={s.content_wrapper}>
-            <div>Music</div>
-            <div>Categories</div>
+            <div>Альбом</div>
+            <AlbumMenu />
         </div>
     );
 };

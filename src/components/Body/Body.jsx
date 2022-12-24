@@ -2,12 +2,12 @@ import React from "react";
 import Content from "./Content/Content";
 import SideBar from "./SideBar/SideBar";
 
-import s from "./Page.module.css";
+import s from "./Body.module.css";
 
-const Page = () => {
+const Body = () => {
     return (
-        <div className={s.page}>
-            <div className={s.page_wrapper}>
+        <div className={s.body}>
+            <div className={s.body_wrapper}>
                 <SideBar />
                 <Content />
             </div>
@@ -15,4 +15,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default Body;

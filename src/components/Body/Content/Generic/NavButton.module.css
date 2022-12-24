@@ -17,6 +17,10 @@
     background-color: rgb(227, 210, 188);
 }
 
+.active {
+    color: red;
+}
+
 .label {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;

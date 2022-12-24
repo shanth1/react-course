@@ -1,16 +1,16 @@
 import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Page from "./components/Page/Page";
+import Body from "./components/Body/Body";
 
 const App = () => {
-  return (
-    <div className="app-wrapper">
-      <Header />
-      <Page />
-      <Footer />
-    </div>
-  );
+    return (
+        <div className="app-wrapper">
+            <Header />
+            <Body />
+            <Footer />
+        </div>
+    );
 };
 
 export default App;
