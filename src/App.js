@@ -3,11 +3,14 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Body from "./components/Body/Body";
 
-const App = () => {
+const App = (props) => {
     return (
         <div className="app-wrapper">
             <Header />
-            <Body />
+            <Body
+                messagesData={props.messagesData}
+                dialogsData={props.dialogsData}
+            />
             <Footer />
         </div>
     );

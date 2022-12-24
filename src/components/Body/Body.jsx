@@ -4,12 +4,15 @@ import SideBar from "./SideBar/SideBar";
 
 import s from "./Body.module.css";
 
-const Body = () => {
+const Body = (props) => {
     return (
         <div className={s.body}>
             <div className={s.body_wrapper}>
                 <SideBar />
-                <Content />
+                <Content
+                    messagesData={props.messagesData}
+                    dialogsData={props.dialogsData}
+                />
             </div>
         </div>
     );

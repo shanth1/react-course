@@ -1,25 +1,10 @@
 import React from "react";
 import DialogItem from "./DialogItem/DialogItem";
 
-let dialogsData = [
-    {
-        id: 1,
-        name: "Mark",
-    },
-    {
-        id: 2,
-        name: "Clara",
-    },
-    {
-        id: 3,
-        name: "Max",
-    },
-];
-
-const MessengerMenu = () => {
+const MessengerMenu = (props) => {
     return (
         <div>
-            {dialogsData.map((dialog) => (
+            {props.dialogsData.map((dialog) => (
                 <DialogItem dialogItem={dialog} />
             ))}
         </div>

@@ -9,13 +9,21 @@ import { MessengerWrapper } from "./Wrappers/MessengerWrapper/MessengerWrapper";
 import { MusicWrapper } from "./Wrappers/MusicWrapper/MusicWrapper";
 import { PortfolioWrapper } from "./Wrappers/PortfolioWrapper/PortfolioWrapper";
 
-const Content = () => {
+const Content = (props) => {
     return (
         <Routes>
             <Route path="/" element={<Navigate to="/feed" />} />
             <Route path="/portfolio" element={<PortfolioWrapper />} />
             <Route path="/feed" element={<FeedWrapper />} />
-            <Route path="/messenger" element={<MessengerWrapper />} />
+            <Route
+                path="/messenger"
+                element={
+                    <MessengerWrapper
+                        messagesData={props.messagesData}
+                        dialogsData={props.dialogsData}
+                    />
+                }
+            />
             <Route path="/friends" element={<FriendsWrapper />} />
             <Route path="/album" element={<AlbumWrapper />} />
             <Route path="/music" element={<MusicWrapper />} />

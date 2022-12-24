@@ -5,7 +5,7 @@ import ChatInput from "./ChatInput/ChatInput";
 const Messenger = (props) => {
     return (
         <div className="">
-            <ChatBody />
+            <ChatBody messagesData={props.messagesData} />
             <ChatInput />
         </div>
     );
