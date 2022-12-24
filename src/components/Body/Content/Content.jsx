@@ -17,14 +17,12 @@ const Content = (props) => {
             <Route path="/feed" element={<FeedWrapper />} />
             <Route
                 path="/messenger"
-                element={
-                    <MessengerWrapper
-                        messagesData={props.messagesData}
-                        dialogsData={props.dialogsData}
-                    />
-                }
+                element={<MessengerWrapper dialogs={props.state.dialogs} />}
             />
-            <Route path="/friends" element={<FriendsWrapper />} />
+            <Route
+                path="/friends"
+                element={<FriendsWrapper friends={props.state.friends} />}
+            />
             <Route path="/album" element={<AlbumWrapper />} />
             <Route path="/music" element={<MusicWrapper />} />
             <Route path="/game" element={<GameWrapper />} />

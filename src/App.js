@@ -7,10 +7,7 @@ const App = (props) => {
     return (
         <div className="app-wrapper">
             <Header />
-            <Body
-                messagesData={props.messagesData}
-                dialogsData={props.dialogsData}
-            />
+            <Body state={props.state} />
             <Footer />
         </div>
     );

@@ -4,7 +4,7 @@ import DialogItem from "./DialogItem/DialogItem";
 const MessengerMenu = (props) => {
     return (
         <div>
-            {props.dialogsData.map((dialog) => (
+            {props.dialogs.map((dialog) => (
                 <DialogItem dialogItem={dialog} />
             ))}
         </div>

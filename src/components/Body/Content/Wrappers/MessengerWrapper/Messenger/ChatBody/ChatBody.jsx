@@ -4,7 +4,7 @@ import MessageItem from "./MessageItem/MessageItem";
 const ChatBody = (props) => {
     return (
         <div className="ChatBody">
-            {props.messagesData.map((message) => (
+            {props.messages.map((message) => (
                 <MessageItem messageItem={message} />
             ))}
         </div>

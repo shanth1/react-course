@@ -6,8 +6,8 @@ import s from "../../Content.module.css";
 export const MessengerWrapper = (props) => {
     return (
         <div className={s.content_wrapper}>
-            <Messenger messagesData={props.messagesData} />
-            <MessengerMenu dialogsData={props.dialogsData} />
+            <Messenger messages={props.dialogs[0].messages} />
+            <MessengerMenu dialogs={props.dialogs} />
         </div>
     );
 };

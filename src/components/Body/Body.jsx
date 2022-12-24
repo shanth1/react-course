@@ -9,10 +9,7 @@ const Body = (props) => {
         <div className={s.body}>
             <div className={s.body_wrapper}>
                 <SideBar />
-                <Content
-                    messagesData={props.messagesData}
-                    dialogsData={props.dialogsData}
-                />
+                <Content state={props.state} />
             </div>
         </div>
     );
