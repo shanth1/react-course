@@ -1,11 +1,13 @@
 import React from "react";
+import Messenger from "./Messenger/Messenger";
+import MessengerMenu from "./MessengerMenu/MessengerMenu";
 import s from "../../Content.module.css";
 
 export const MessengerWrapper = () => {
     return (
         <div className={s.content_wrapper}>
-            <div>Сообщения</div>
-            <div>Друзья</div>
+            <Messenger />
+            <MessengerMenu />
         </div>
     );
 };
