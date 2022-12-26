@@ -1,0 +1,12 @@
+.messenger{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 30px 1fr 30px;
+    background-color: antiquewhite;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    position: sticky;
+    top: calc(50px + 10px);
+    height: calc(100vh - 50px - 20px);
+}

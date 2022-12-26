@@ -1,7 +1,8 @@
 import React from "react";
+import NavButton from "../../../../Generic/NavButton";
 
 const DialogItem = (props) => {
-    return <div className="DialogItem">{props.dialogItem.name}</div>;
+    return <NavButton label={props.dialogItem.name} />;
 };
 
 export default DialogItem;
