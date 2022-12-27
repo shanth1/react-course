@@ -1,0 +1,28 @@
+.messageItem{
+    background-color: wheat;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    gap: 10px
+}
+
+.mine{
+    align-self: end;
+    background-color: cornsilk;
+    border: 1px solid black;
+    flex-direction: row-reverse;
+
+}
+
+.his{
+    background-color:cornsilk;
+    border: 1px solid black;
+}
+
+.date{
+    align-self: flex-end;
+    font-size: 12px;
+}
