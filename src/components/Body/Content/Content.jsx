@@ -17,7 +17,12 @@ const Content = (props) => {
             <Route path="/feed" element={<FeedWrapper />} />
             <Route
                 path="/messenger"
-                element={<MessengerWrapper dialogs={props.state.dialogs} />}
+                element={
+                    <MessengerWrapper
+                        dialogs={props.state.dialogs}
+                        addMessage={props.addMessage}
+                    />
+                }
             />
             <Route
                 path="/friends"

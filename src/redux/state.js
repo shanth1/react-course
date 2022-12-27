@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from "../render";
+
 const state = {
     name: "Allen Gomez",
     friends: [
@@ -69,6 +71,16 @@ const state = {
             ],
         },
     ],
+};
+
+export const addMessage = (text) => {
+    state.dialogs[0].messages.push({
+        id: 111,
+        text: text,
+        time: "xxx",
+        sentByMe: true,
+    });
+    rerenderEntireTree(state, addMessage);
 };
 
 export default state;

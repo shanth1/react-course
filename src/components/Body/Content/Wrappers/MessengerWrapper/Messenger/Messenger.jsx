@@ -9,7 +9,7 @@ const Messenger = (props) => {
         <div className={s.messenger}>
             <div>Header</div>
             <ChatBody messages={props.messages} />
-            <ChatInput />
+            <ChatInput addMessage={props.addMessage} />
         </div>
     );
 };

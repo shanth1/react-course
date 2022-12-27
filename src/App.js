@@ -6,7 +6,7 @@ const App = (props) => {
     return (
         <div className="app-wrapper">
             <Header />
-            <Body state={props.state} />
+            <Body state={props.state} addMessage={props.addMessage} />
             {/* <Footer /> */}
         </div>
     );

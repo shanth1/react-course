@@ -6,7 +6,10 @@ const ChatBody = (props) => {
     return (
         <div className={s.chatBody}>
             {props.messages.map((message) => (
-                <MessageItem messageItem={message} />
+                <MessageItem
+                    messageItem={message}
+                    addMessage={props.addMessage}
+                />
             ))}
         </div>
     );
