@@ -74,10 +74,15 @@ const state = {
 };
 
 export const addMessage = (text) => {
+    let date = new Date();
+
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+
     state.dialogs[0].messages.push({
         id: 111,
         text: text,
-        time: "xxx",
+        time: `${hours}:${minutes}`,
         sentByMe: true,
     });
     rerenderEntireTree(state, addMessage);

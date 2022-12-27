@@ -4,9 +4,8 @@ import s from "./ChatInput.module.css";
 const ChatInput = (props) => {
     let newMessageRef = React.createRef();
     let newMessage = () => {
-        debugger;
         props.addMessage(newMessageRef.current.value);
-        console.log("send");
+        newMessageRef.current.value = "";
     };
     return (
         <div className={s.chatInput}>
