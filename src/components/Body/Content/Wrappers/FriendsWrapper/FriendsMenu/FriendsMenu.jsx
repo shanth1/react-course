@@ -3,7 +3,6 @@ import NavButton from "../../../Generic/NavButton";
 import s from "../../../Generic/MenuNav.module.css";
 
 const FriendsMenu = (props) => {
-    // debugger;
     return (
         <div className={s.menu_nav}>
             {props.friends.map((friend) => (

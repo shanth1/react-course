@@ -5,11 +5,15 @@ import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-export let rerenderEntireTree = (state, addMessage) => {
+export let rerenderEntireTree = (state, addMessage, updateNewMessageText) => {
     root.render(
         <React.StrictMode>
             <BrowserRouter>
-                <App state={state} addMessage={addMessage} />
+                <App
+                    state={state}
+                    addMessage={addMessage}
+                    updateNewMessageText={updateNewMessageText}
+                />
             </BrowserRouter>
         </React.StrictMode>,
     );

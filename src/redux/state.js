@@ -13,6 +13,7 @@ const state = {
         {
             id: 1,
             name: "Raul Hudson",
+            newMessageText: "hihihih2",
             messages: [
                 {
                     id: 1,
@@ -85,7 +86,12 @@ export const addMessage = (text) => {
         time: `${hours}:${minutes}`,
         sentByMe: true,
     });
-    rerenderEntireTree(state, addMessage);
+    rerenderEntireTree(state, addMessage, updateNewMessageText);
+};
+
+export const updateNewMessageText = (newText) => {
+    state.dialogs[0].newMessageText = newText;
+    rerenderEntireTree(state, addMessage, updateNewMessageText);
 };
 
 export default state;

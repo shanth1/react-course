@@ -21,6 +21,7 @@ const Content = (props) => {
                     <MessengerWrapper
                         dialogs={props.state.dialogs}
                         addMessage={props.addMessage}
+                        updateNewMessageText={props.updateNewMessageText}
                     />
                 }
             />
