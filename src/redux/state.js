@@ -21,8 +21,9 @@ export const state = {
                 ],
             },
             messages: {
-                dialogs: {
-                    mark_orlov: {
+                dialogs: [
+                    {
+                        companion: "mark_orlov",
                         messages: [
                             {
                                 id: 1,
@@ -54,7 +55,8 @@ export const state = {
                         ],
                         input: "Test",
                     },
-                    andabura: {
+                    {
+                        companion: "andaburas",
                         messages: [
                             {
                                 id: 1,
@@ -77,7 +79,7 @@ export const state = {
                         ],
                         input: "",
                     },
-                },
+                ],
             },
             friends: ["mark_orlov", "sara_li", "oleg_lsp", "andabura"],
             albums: {
@@ -106,7 +108,7 @@ export const newMessage = (text) => {
     let hours = date.getHours();
     let minutes = date.getMinutes();
 
-    state.users.shanth1.messages.dialogs.mark_orlov.messages.push({
+    state.users.shanth1.messages.dialogs[0].messages.push({
         id: 3,
         text: text,
         dateInfo: {
@@ -119,6 +121,6 @@ export const newMessage = (text) => {
 };
 
 export const updateChatInput = (newText) => {
-    state.users.shanth1.messages.dialogs.mark_orlov.input = newText;
+    state.users.shanth1.messages.dialogs[0].input = newText;
     rerenderEntireTree(state.users.shanth1, newMessage, updateChatInput);
 };

@@ -5,7 +5,9 @@ import s from "../../../Generic/MenuNav.module.css";
 const MessengerMenu = (props) => {
     return (
         <div className={s.menu_nav}>
-            <DialogItem dialogItem={{ name: "Исправить" }} />
+            {props.dialogs.map((dialog) => (
+                <DialogItem companionName={dialog.companion} />
+            ))}
         </div>
     );
 };
