@@ -8,11 +8,11 @@ const Messenger = (props) => {
     return (
         <div className={s.messenger}>
             <div>Header</div>
-            <ChatBody messages={props.messages} />
+            <ChatBody messages={props.dialog.messages} />
             <ChatInput
-                addMessage={props.addMessage}
-                newMessageText={props.newMessageText}
-                updateNewMessageText={props.updateNewMessageText}
+                newMessage={props.newMessage}
+                newMessageText={props.dialog.input}
+                updateChatInput={props.updateChatInput}
             />
         </div>
     );

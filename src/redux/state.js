@@ -1,8 +1,8 @@
 import { rerenderEntireTree } from "../render";
 
-let date = new Date();
+let dateStart = new Date();
 
-const state2 = {
+export const state = {
     users: {
         shanth1: {
             passInfo: {
@@ -26,24 +26,33 @@ const state2 = {
                         messages: [
                             {
                                 id: 1,
-                                text: "Привет!",
-                                date: new Date(),
+                                text: "Привет",
+                                dateInfo: {
+                                    hours: dateStart.getHours(),
+                                    minutes: dateStart.getMinutes(),
+                                },
                                 sender: "shanth1",
                             },
                             {
                                 id: 2,
                                 text: "Привет!",
-                                date: new Date(),
+                                dateInfo: {
+                                    hours: dateStart.getHours(),
+                                    minutes: dateStart.getMinutes(),
+                                },
                                 sender: "mark_orlov",
                             },
                             {
                                 id: 3,
-                                text: "Привет!",
-                                date: new Date(),
+                                text: "Как дела?",
+                                dateInfo: {
+                                    hours: dateStart.getHours(),
+                                    minutes: dateStart.getMinutes(),
+                                },
                                 sender: "mark_orlov",
                             },
                         ],
-                        input: "",
+                        input: "Test",
                     },
                     andabura: {
                         messages: [
@@ -91,99 +100,25 @@ const state2 = {
     },
 };
 
-const state = {
-    name: "Allen Gomez",
-    friends: [
-        "Lawrence Williams",
-        "Raul Hudson",
-        "George Brown",
-        "Dennis Snyder",
-        "Richard Marsh",
-    ],
-    dialogs: [
-        {
-            id: 1,
-
-            name: "Raul Hudson",
-            newMessageText: "hihihih2",
-            messages: [
-                {
-                    id: 1,
-                    text: "Привет",
-                    time: "00:10",
-                    sentByMe: true,
-                },
-                {
-                    id: 2,
-                    text: "Привет!",
-                    time: "07:39",
-                    sentByMe: false,
-                },
-                {
-                    id: 3,
-                    text: "Как дела?",
-                    time: "07:39",
-                    sentByMe: false,
-                },
-                {
-                    id: 4,
-                    text: "Нормально",
-                    time: "09:22",
-                    sentByMe: true,
-                },
-            ],
-        },
-        {
-            id: 2,
-            name: "Dennis Snyder",
-            messages: [
-                {
-                    id: 1,
-                    text: "Здравствуйте",
-                    time: "05:55",
-                    sentByMe: false,
-                },
-                {
-                    id: 2,
-                    text: "Хотел предложить",
-                    time: "05:56",
-                    sentByMe: false,
-                },
-                {
-                    id: 3,
-                    text: "Услугу",
-                    time: "05:58",
-                    sentByMe: false,
-                },
-                {
-                    id: 4,
-                    text: "В банке",
-                    time: "06:32",
-                    sentByMe: true,
-                },
-            ],
-        },
-    ],
-};
-
-export const addMessage = (text) => {
+export const newMessage = (text) => {
     let date = new Date();
 
     let hours = date.getHours();
     let minutes = date.getMinutes();
 
-    state.dialogs[0].messages.push({
-        id: 111,
+    state.users.shanth1.messages.dialogs.mark_orlov.messages.push({
+        id: 3,
         text: text,
-        time: `${hours}:${minutes}`,
-        sentByMe: true,
+        dateInfo: {
+            hours: hours,
+            minutes: minutes,
+        },
+        sender: "shanth1",
     });
-    rerenderEntireTree(state, addMessage, updateNewMessageText);
+    rerenderEntireTree(state.users.shanth1, newMessage, updateChatInput);
 };
 
-export const updateNewMessageText = (newText) => {
-    state.dialogs[0].newMessageText = newText;
-    rerenderEntireTree(state, addMessage, updateNewMessageText);
+export const updateChatInput = (newText) => {
+    state.users.shanth1.messages.dialogs.mark_orlov.input = newText;
+    rerenderEntireTree(state.users.shanth1, newMessage, updateChatInput);
 };
-
-export default state;

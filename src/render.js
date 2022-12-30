@@ -5,14 +5,14 @@ import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-export let rerenderEntireTree = (state, addMessage, updateNewMessageText) => {
+export let rerenderEntireTree = (state, newMessage, updateChatInput) => {
     root.render(
         <React.StrictMode>
             <BrowserRouter>
                 <App
                     state={state}
-                    addMessage={addMessage}
-                    updateNewMessageText={updateNewMessageText}
+                    newMessage={newMessage}
+                    updateChatInput={updateChatInput}
                 />
             </BrowserRouter>
         </React.StrictMode>,

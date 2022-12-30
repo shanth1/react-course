@@ -1,5 +1,4 @@
-import state, { addMessage } from "./redux/state";
+import { state, newMessage, updateChatInput } from "./redux/state";
 import { rerenderEntireTree } from "./render";
-import { updateNewMessageText } from "./redux/state";
 
-rerenderEntireTree(state, addMessage, updateNewMessageText);
+rerenderEntireTree(state.users.shanth1, newMessage, updateChatInput);

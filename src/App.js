@@ -8,8 +8,8 @@ const App = (props) => {
             <Header />
             <Body
                 state={props.state}
-                addMessage={props.addMessage}
-                updateNewMessageText={props.updateNewMessageText}
+                newMessage={props.newMessage}
+                updateChatInput={props.updateChatInput}
             />
             {/* <Footer /> */}
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useDebugValue } from "react";
 import MessageItem from "./MessageItem/MessageItem";
 import s from "./ChatBody.module.css";
 
@@ -9,7 +9,7 @@ const ChatBody = (props) => {
                 {props.messages.map((message) => (
                     <MessageItem
                         messageItem={message}
-                        addMessage={props.addMessage}
+                        newMessage={props.newMessage}
                     />
                 ))}
             </div>

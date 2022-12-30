@@ -7,10 +7,9 @@ export const MessengerWrapper = (props) => {
     return (
         <div className={s.content_wrapper}>
             <Messenger
-                messages={props.dialogs[0].messages}
-                newMessageText={props.dialogs[0].newMessageText}
-                addMessage={props.addMessage}
-                updateNewMessageText={props.updateNewMessageText}
+                dialog={props.dialogs.mark_orlov}
+                newMessage={props.newMessage}
+                updateChatInput={props.updateChatInput}
             />
             <MessengerMenu dialogs={props.dialogs} />
         </div>
