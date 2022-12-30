@@ -1,5 +1,3 @@
-import { rerenderEntireTree } from "../render";
-
 let dateStart = new Date();
 
 export const state = {
@@ -102,6 +100,14 @@ export const state = {
     },
 };
 
+let rerenderEntireTree = (state) => {
+    console.log("state changed");
+};
+
+export const subscribers = (observer) => {
+    rerenderEntireTree = observer;
+};
+
 export const newMessage = (text) => {
     let date = new Date();
 
@@ -117,7 +123,7 @@ export const newMessage = (text) => {
         },
         sender: "shanth1",
     });
-    rerenderEntireTree(state.users.shanth1, newMessage, updateChatInput);
+    rerenderEntireTree(state.users.shanth1);
 };
 
 export const updateChatInput = (newText) => {
