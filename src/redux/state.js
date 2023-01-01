@@ -1,3 +1,6 @@
+const NEW_MESSAGE = "NEW-MESSAGE";
+const UPDATE_CHAT_INPUT = "UPDATE-CHAT-INPUT";
+
 let dateStart = new Date();
 
 let store = {
@@ -131,9 +134,9 @@ let store = {
         this._callSubscriber(this._state.users.shanth1);
     },
     dispatch(action) {
-        if (action.type === "NEW-MESSAGE") {
+        if (action.type === NEW_MESSAGE) {
             this._newMessage(action.messageText);
-        } else if (action.type === "UPDATE-CHAT-INPUT") {
+        } else if (action.type === UPDATE_CHAT_INPUT) {
             this._updateChatInput(action.inputText);
         }
     },
