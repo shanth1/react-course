@@ -1,5 +1,4 @@
-const NEW_MESSAGE = "NEW-MESSAGE";
-const UPDATE_CHAT_INPUT = "UPDATE-CHAT-INPUT";
+import messengerReducer from "../redux/messengerReducer";
 
 let dateStart = new Date("December 10, 202 12:31:00");
 
@@ -111,35 +110,9 @@ let store = {
     subscribers(observer) {
         this._callSubscriber = observer;
     },
-
-    _newMessage(text) {
-        let date = new Date();
-
-        let hours = date.getHours();
-        let minutes = date.getMinutes();
-
-        this._state.users.shanth1.messages.dialogs[0].messages.push({
-            id: 3,
-            text: text,
-            dateInfo: {
-                hours: hours,
-                minutes: minutes,
-            },
-            sender: "shanth1",
-        });
-        this._state.users.shanth1.messages.dialogs[0].input = "";
-        this._callSubscriber(this._state.users.shanth1);
-    },
-    _updateChatInput(newText) {
-        this._state.users.shanth1.messages.dialogs[0].input = newText;
-        this._callSubscriber(this._state.users.shanth1);
-    },
     dispatch(action) {
-        if (action.type === NEW_MESSAGE) {
-            this._newMessage(action.messageText);
-        } else if (action.type === UPDATE_CHAT_INPUT) {
-            this._updateChatInput(action.inputText);
-        }
+        messengerReducer(this._state.users.shanth1.messages, action);
+        this._callSubscriber(this._state.users.shanth1);
     },
 };
 
