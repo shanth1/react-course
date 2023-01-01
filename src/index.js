@@ -1,4 +1,4 @@
-import store from "./redux/state";
+import store from "./store/store";
 import App from "./App";
 import React from "react";
 import ReactDOM from "react-dom/client";

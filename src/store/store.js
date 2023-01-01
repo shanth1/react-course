@@ -1,7 +1,7 @@
 const NEW_MESSAGE = "NEW-MESSAGE";
 const UPDATE_CHAT_INPUT = "UPDATE-CHAT-INPUT";
 
-let dateStart = new Date();
+let dateStart = new Date("December 10, 202 12:31:00");
 
 let store = {
     _state: {
