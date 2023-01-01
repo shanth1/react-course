@@ -1,20 +1,22 @@
 import React from "react";
 import s from "./ChatInput.module.css";
+import {
+    newMessageActionCreator,
+    updateChatInputActionCreator,
+} from "../../../../../../../utils/actionCreators";
 
 const ChatInput = (props) => {
     let newMessageRef = React.createRef();
 
     let newMessage = () => {
         let value = newMessageRef.current.value;
-        let action = { type: "NEW-MESSAGE", messageText: value };
-        props.dispatch(action);
+        props.dispatch(newMessageActionCreator(value));
         newMessageRef.current.value = "";
     };
 
     let newMessageText = () => {
         let text = newMessageRef.current.value;
-        let action = { type: "UPDATE-CHAT-INPUT", inputText: text };
-        props.dispatch(action);
+        props.dispatch(updateChatInputActionCreator(text));
     };
     return (
         <div className={s.chatInput}>
