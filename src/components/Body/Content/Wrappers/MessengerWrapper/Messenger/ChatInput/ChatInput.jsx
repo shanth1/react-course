@@ -6,24 +6,24 @@ import {
 } from "../../../../../../../utils/actionCreators";
 
 const ChatInput = (props) => {
-    let newMessage = () => {
-        let value = props.newMessageText;
+    let sendMessage = () => {
+        let value = props.inputText;
         props.dispatch(newMessageActionCreator(value));
     };
 
-    let newMessageText = (e) => {
+    let updateInput = (e) => {
         let text = e.target.value;
         props.dispatch(updateChatInputActionCreator(text));
     };
     return (
         <div className={s.chatInput}>
             <input
-                onChange={newMessageText}
-                value={props.newMessageText}
+                onChange={updateInput}
+                value={props.inputText}
                 className={s.input}
                 type="text"
             />
-            <button onClick={newMessage}>send</button>
+            <button onClick={sendMessage}>send</button>
         </div>
     );
 };
