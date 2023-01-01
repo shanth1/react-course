@@ -100,14 +100,16 @@ let store = {
             },
         },
     },
+    _callSubscriber(state) {},
+
     getState() {
         return this._state;
     },
-    _callSubscriber(store) {},
     subscribers(observer) {
         this._callSubscriber = observer;
     },
-    newMessage(text) {
+
+    _newMessage(text) {
         let date = new Date();
 
         let hours = date.getHours();
@@ -122,13 +124,19 @@ let store = {
             },
             sender: "shanth1",
         });
-        this._callSubscriber(this);
+        this._callSubscriber(this._state.users.shanth1);
     },
-    updateChatInput(newText) {
+    _updateChatInput(newText) {
         this._state.users.shanth1.messages.dialogs[0].input = newText;
-        this._callSubscriber(this);
+        this._callSubscriber(this._state.users.shanth1);
+    },
+    dispatch(action) {
+        if (action.type === "NEW-MESSAGE") {
+            this._newMessage(action.messageText);
+        } else if (action.type === "UPDATE-CHAT-INPUT") {
+            this._updateChatInput(action.inputText);
+        }
     },
 };
 
 export default store;
-window.store = store;

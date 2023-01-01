@@ -5,13 +5,16 @@ const ChatInput = (props) => {
     let newMessageRef = React.createRef();
 
     let newMessage = () => {
-        props.newMessage(newMessageRef.current.value);
+        let value = newMessageRef.current.value;
+        let action = { type: "NEW-MESSAGE", messageText: value };
+        props.dispatch(action);
         newMessageRef.current.value = "";
     };
 
     let newMessageText = () => {
         let text = newMessageRef.current.value;
-        props.updateChatInput(text);
+        let action = { type: "UPDATE-CHAT-INPUT", inputText: text };
+        props.dispatch(action);
     };
     return (
         <div className={s.chatInput}>

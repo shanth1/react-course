@@ -6,11 +6,7 @@ import s from "../../Content.module.css";
 export const MessengerWrapper = (props) => {
     return (
         <div className={s.content_wrapper}>
-            <Messenger
-                dialog={props.dialogs}
-                newMessage={props.newMessage}
-                updateChatInput={props.updateChatInput}
-            />
+            <Messenger dialog={props.dialogs} dispatch={props.dispatch} />
             <MessengerMenu dialogs={props.dialogs} />
         </div>
     );

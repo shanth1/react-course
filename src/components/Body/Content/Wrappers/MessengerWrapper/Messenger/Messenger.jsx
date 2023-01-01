@@ -10,9 +10,8 @@ const Messenger = (props) => {
             <div>Header</div>
             <ChatBody messages={props.dialog[0].messages} />
             <ChatInput
-                newMessage={props.newMessage}
                 newMessageText={props.dialog.input}
-                updateChatInput={props.updateChatInput}
+                dispatch={props.dispatch}
             />
         </div>
     );
