@@ -55,7 +55,7 @@ let store = {
                                     sender: "mark_orlov",
                                 },
                             ],
-                            input: "Test",
+                            input: "",
                         },
                         {
                             companion: "andaburas",
@@ -127,6 +127,7 @@ let store = {
             },
             sender: "shanth1",
         });
+        this._state.users.shanth1.messages.dialogs[0].input = "";
         this._callSubscriber(this._state.users.shanth1);
     },
     _updateChatInput(newText) {

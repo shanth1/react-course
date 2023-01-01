@@ -11,7 +11,6 @@ const ChatInput = (props) => {
     let newMessage = () => {
         let value = newMessageRef.current.value;
         props.dispatch(newMessageActionCreator(value));
-        newMessageRef.current.value = "";
     };
 
     let newMessageText = () => {
