@@ -1,4 +1,4 @@
-import React, { useDebugValue } from "react";
+import React from "react";
 import MessageItem from "./MessageItem/MessageItem";
 import s from "./ChatBody.module.css";
 

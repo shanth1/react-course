@@ -6,15 +6,13 @@ import {
 } from "../../../../../../../utils/actionCreators";
 
 const ChatInput = (props) => {
-    let newMessageRef = React.createRef();
-
     let newMessage = () => {
-        let value = newMessageRef.current.value;
+        let value = props.newMessageText;
         props.dispatch(newMessageActionCreator(value));
     };
 
-    let newMessageText = () => {
-        let text = newMessageRef.current.value;
+    let newMessageText = (e) => {
+        let text = e.target.value;
         props.dispatch(updateChatInputActionCreator(text));
     };
     return (
@@ -22,7 +20,6 @@ const ChatInput = (props) => {
             <input
                 onChange={newMessageText}
                 value={props.newMessageText}
-                ref={newMessageRef}
                 className={s.input}
                 type="text"
             />
