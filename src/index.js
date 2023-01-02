@@ -3,18 +3,18 @@ import App from "./App";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import StoreContext from "./StoreContext";
+import { Provider } from "./StoreContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 let rerenderEntireTree = (store) => {
     root.render(
         <React.StrictMode>
-            <StoreContext.Provider value={store}>
-                <BrowserRouter>
+            <BrowserRouter>
+                <Provider value={store}>
                     <App />
-                </BrowserRouter>
-            </StoreContext.Provider>
+                </Provider>
+            </BrowserRouter>
         </React.StrictMode>,
     );
 };
