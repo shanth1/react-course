@@ -1,19 +1,15 @@
 import React from "react";
-import {
-    newMessageActionCreator,
-    updateChatInputActionCreator,
-} from "../../../../../../../redux/messengerReducer";
 import s from "./ChatInput.module.css";
 
 const ChatInput = (props) => {
     let sendMessage = () => {
         let value = props.inputText;
-        props.dispatch(newMessageActionCreator(value));
+        props.renderMessage(value);
     };
 
     let updateInput = (e) => {
         let text = e.target.value;
-        props.dispatch(updateChatInputActionCreator(text));
+        props.renderChatInput(text);
     };
     return (
         <div className={s.chatInput}>
