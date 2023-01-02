@@ -37,7 +37,7 @@ const SideBar = () => {
                     label="Музыка"
                 />
                 <SideBarButton
-                    href="game"
+                    href="games"
                     icon="https://cdn-icons-png.flaticon.com/64/77/77639.png"
                     label="Игры"
                 />

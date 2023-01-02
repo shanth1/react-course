@@ -33,7 +33,7 @@ const Content = (props) => {
                 element={<FriendsWrapper friends={props.state.friends} />}
             />
             <Route
-                path="/albums"
+                path="/album"
                 albums={props.state.albums}
                 element={<AlbumWrapper />}
             />
