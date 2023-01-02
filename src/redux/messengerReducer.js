@@ -1,7 +1,71 @@
 const NEW_MESSAGE = "NEW-MESSAGE";
 const UPDATE_CHAT_INPUT = "UPDATE-CHAT-INPUT";
 
-const messengerReducer = (state, action) => {
+const dateStart = new Date("December 10, 202 12:31:00");
+
+const initialState = {
+    dialogs: [
+        {
+            companion: "mark_orlov",
+            messages: [
+                {
+                    id: 1,
+                    text: "Привет",
+                    dateInfo: {
+                        hours: dateStart.getHours(),
+                        minutes: dateStart.getMinutes(),
+                    },
+                    sender: "shanth1",
+                },
+                {
+                    id: 2,
+                    text: "Привет!",
+                    dateInfo: {
+                        hours: dateStart.getHours(),
+                        minutes: dateStart.getMinutes(),
+                    },
+                    sender: "mark_orlov",
+                },
+                {
+                    id: 3,
+                    text: "Как дела?",
+                    dateInfo: {
+                        hours: dateStart.getHours(),
+                        minutes: dateStart.getMinutes(),
+                    },
+                    sender: "mark_orlov",
+                },
+            ],
+            input: "",
+        },
+        {
+            companion: "andaburas",
+            messages: [
+                {
+                    id: 1,
+                    text: "Здравствуйте!",
+                    date: new Date(),
+                    sender: "shanth1",
+                },
+                {
+                    id: 2,
+                    text: "Добрый вечер",
+                    date: new Date(),
+                    sender: "andabura",
+                },
+                {
+                    id: 3,
+                    text: "Вы кто?",
+                    date: new Date(),
+                    sender: "andabura",
+                },
+            ],
+            input: "",
+        },
+    ],
+};
+
+const messengerReducer = (state = initialState, action) => {
     switch (action.type) {
         case NEW_MESSAGE:
             let date = new Date();

@@ -23,7 +23,7 @@ const Content = (props) => {
                 path="/messenger"
                 element={
                     <MessengerWrapper
-                        dialogs={props.state.messages.dialogs}
+                        dialogs={props.state.messenger.dialogs}
                         dispatch={props.dispatch}
                     />
                 }

@@ -1,4 +1,6 @@
-const feedReducer = (state, action) => {
+const initialState = [];
+
+const feedReducer = (state = initialState, action) => {
     return state;
 };
 

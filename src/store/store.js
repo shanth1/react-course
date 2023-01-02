@@ -21,7 +21,7 @@ let store = {
                         { id: 3, title: "hi", bg: "bg", content: "content" },
                     ],
                 },
-                messages: {
+                messenger: {
                     dialogs: [
                         {
                             companion: "mark_orlov",

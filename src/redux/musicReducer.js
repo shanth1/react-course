@@ -1,4 +1,6 @@
-const musicReducer = (state, action) => {
+const initialState = [];
+
+const musicReducer = (state = initialState, action) => {
     return state;
 };
 

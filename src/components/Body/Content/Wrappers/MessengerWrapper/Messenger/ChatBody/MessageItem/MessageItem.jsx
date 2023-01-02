@@ -9,7 +9,7 @@ const MessageItem = (props) => {
     return (
         <div
             className={
-                s.messageItem + " " + (sender == "shanth1" ? s.mine : s.his)
+                s.messageItem + " " + (sender === "shanth1" ? s.mine : s.his)
             }
         >
             <div>{text}</div>

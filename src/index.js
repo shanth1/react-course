@@ -1,4 +1,4 @@
-import store from "./store/store";
+import store from "./redux/reduxStore";
 import App from "./App";
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -16,5 +16,8 @@ let rerenderEntireTree = (state) => {
     );
 };
 
-rerenderEntireTree(store.getState().users.shanth1);
-store.subscribers(rerenderEntireTree);
+rerenderEntireTree(store.getState());
+store.subscribe(() => {
+    let state = store.getState();
+    rerenderEntireTree(state);
+});
