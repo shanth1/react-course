@@ -9,7 +9,7 @@ const Body = (props) => {
         <div className={s.body}>
             <div className={s.body_wrapper}>
                 <SideBar />
-                <Content state={props.state} dispatch={props.dispatch} />
+                <Content />
             </div>
         </div>
     );

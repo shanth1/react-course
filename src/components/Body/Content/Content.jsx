@@ -13,40 +13,13 @@ const Content = (props) => {
     return (
         <Routes>
             <Route path="/" element={<Navigate to="/feed" />} />
-            <Route
-                path="/portfolio"
-                portfolio={props.state.portfolio}
-                element={<PortfolioWrapper />}
-            />
+            <Route path="/portfolio" element={<PortfolioWrapper />} />
             <Route path="/feed" element={<FeedWrapper />} />
-            <Route
-                path="/messenger"
-                element={
-                    <MessengerWrapper
-                        dialogs={props.state.messenger.dialogs}
-                        dispatch={props.dispatch}
-                    />
-                }
-            />
-            <Route
-                path="/friends"
-                element={<FriendsWrapper friends={props.state.friends} />}
-            />
-            <Route
-                path="/album"
-                albums={props.state.albums}
-                element={<AlbumWrapper />}
-            />
-            <Route
-                path="/music"
-                music={props.state.music}
-                element={<MusicWrapper />}
-            />
-            <Route
-                path="/games"
-                games={props.state.games}
-                element={<GameWrapper />}
-            />
+            <Route path="/messenger" element={<MessengerWrapper />} />
+            <Route path="/friends" element={<FriendsWrapper />} />
+            <Route path="/album" element={<AlbumWrapper />} />
+            <Route path="/music" element={<MusicWrapper />} />
+            <Route path="/games" element={<GameWrapper />} />
             <Route path="*" element={<ErrorWrapper />} />
         </Routes>
     );
