@@ -1,22 +1,13 @@
 import React from "react";
-import Messenger from "./Messenger/Messenger";
-import MessengerMenu from "./MessengerMenu/MessengerMenu";
 import s from "../../Content.module.css";
-import StoreContext from "../../../../../StoreContext";
+import MessengerContainer from "./Messenger/MessengerContainer";
+import MessengerMenuContainer from "./MessengerMenu/MessengerMenuContainer";
 
 export const MessengerWrapper = (props) => {
     return (
-        <StoreContext.Consumer>
-            {(store) => {
-                const dialogs = store.getState().messenger.dialogs;
-                const dispatch = store.dispatch;
-                return (
-                    <div className={s.content_wrapper}>
-                        <Messenger dialogs={dialogs} dispatch={dispatch} />
-                        <MessengerMenu dialogs={dialogs} />
-                    </div>
-                );
-            }}
-        </StoreContext.Consumer>
+        <div className={s.content_wrapper}>
+            <MessengerContainer />
+            <MessengerMenuContainer />
+        </div>
     );
 };

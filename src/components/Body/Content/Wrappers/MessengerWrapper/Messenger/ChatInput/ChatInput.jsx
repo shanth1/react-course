@@ -4,7 +4,7 @@ import s from "./ChatInput.module.css";
 const ChatInput = (props) => {
     let sendMessage = () => {
         let value = props.inputText;
-        props.renderMessage(value);
+        props.renderMessages(value);
     };
 
     let updateInput = (e) => {
