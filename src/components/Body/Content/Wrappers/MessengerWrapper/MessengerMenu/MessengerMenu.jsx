@@ -3,7 +3,6 @@ import DialogItem from "./DialogItem/DialogItem";
 import s from "../../../Generic/MenuNav.module.css";
 
 const MessengerMenu = (props) => {
-    debugger;
     return (
         <div className={s.menu_nav}>
             {props.dialogs.map((dialog) => (

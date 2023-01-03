@@ -66,6 +66,11 @@ const initialState = {
 };
 
 const messengerReducer = (state = initialState, action) => {
+    let stateCopy = { dialogs: [] };
+
+    state.dialogs.map((dialog) =>
+        stateCopy.dialogs.push({ ...dialog, messages: [...dialog.messages] }),
+    );
     switch (action.type) {
         case NEW_MESSAGE:
             let date = new Date();
@@ -73,7 +78,7 @@ const messengerReducer = (state = initialState, action) => {
             let hours = date.getHours();
             let minutes = date.getMinutes();
 
-            state.dialogs[0].messages.push({
+            stateCopy.dialogs[0].messages.push({
                 id: 3,
                 text: action.messageText,
                 dateInfo: {
@@ -82,13 +87,13 @@ const messengerReducer = (state = initialState, action) => {
                 },
                 sender: "shanth1",
             });
-            state.dialogs[0].input = "";
-            return state;
+            stateCopy.dialogs[0].input = "";
+            return stateCopy;
         case UPDATE_CHAT_INPUT:
-            state.dialogs[0].input = action.inputText;
-            return state;
+            stateCopy.dialogs[0].input = action.inputText;
+            return stateCopy;
         default:
-            return state;
+            return stateCopy;
     }
 };
 
