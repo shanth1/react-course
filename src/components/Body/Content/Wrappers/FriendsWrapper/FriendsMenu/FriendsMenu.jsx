@@ -6,7 +6,7 @@ const FriendsMenu = (props) => {
     return (
         <div className={s.menu_nav}>
             {props.friends.map((friend) => (
-                <NavButton label={friend} />
+                <NavButton key={friend.id} nickName={friend.nickName} />
             ))}
         </div>
     );

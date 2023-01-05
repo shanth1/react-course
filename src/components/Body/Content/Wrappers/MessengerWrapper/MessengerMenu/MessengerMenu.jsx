@@ -6,7 +6,7 @@ const MessengerMenu = (props) => {
     return (
         <div className={s.menu_nav}>
             {props.dialogs.map((dialog) => (
-                <DialogItem companionName={dialog.companion} />
+                <DialogItem key={dialog.id} companionName={dialog.companion} />
             ))}
         </div>
     );

@@ -6,6 +6,7 @@ const dateStart = new Date("December 10, 202 12:31:00");
 const initialState = {
     dialogs: [
         {
+            id: 1,
             companion: "mark_orlov",
             messages: [
                 {
@@ -39,6 +40,7 @@ const initialState = {
             input: "",
         },
         {
+            id: 2,
             companion: "andaburas",
             messages: [
                 {

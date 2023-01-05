@@ -8,6 +8,7 @@ const ChatBody = (props) => {
             <div className={s.chatBody}>
                 {props.messages.map((message) => (
                     <MessageItem
+                        key={message.id}
                         messageItem={message}
                         newMessage={props.newMessage}
                     />
